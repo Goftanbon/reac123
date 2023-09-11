@@ -1,9 +1,21 @@
+import { useState } from "react"
+
 const Home = () => {
-    return (
-      <div className="home">
-        <h2>Homepage</h2>
-      </div>
-    );
+  const [Title, setTitle] = useState('are you a sinner !!')
+  const chageState = () => {
+    setTitle('jesus loves you')
   }
-   
-  export default Home;
+  // const handleClik = (e) => {
+  //   console.log("hello " + name + e);
+  // }
+  // const name = prompt("what is ur name");
+  return (
+    <div className="home">
+      <h2>Homepage</h2>
+      <h3>{Title}</h3>
+      <button onClick={chageState}></button>
+    </div>
+  );
+}
+
+export default Home;
